@@ -1,39 +1,31 @@
-import "./index.css";
-import Header from "./components/header";
-import Catalog from "./components/catalog";
-import Products from "./components/products";
-import AllProducts from "./components/allProducts";
-import Register from "./components/register";
-import Categoried from "./components/categoried";
-import Page404 from "./components/page404";
-import Sitemap from "./components/sitemap";
+// src/App.js
+import React from 'react';
+import InventoryList from './components/InventoryList';
+import './App.css';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Detail from './components/detail';
 function App() {
-  function Home() {
-    return (
-      <>
-        <Header />
-        <Catalog/>
-        <Products />
-      </>
-    );
-  }
   return (
-    <>
-      <Router >
-        <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/products/:productId" element={<Detail/>} />
-            <Route path="/buying/:productId" element={<Register/>}/>
-            <Route path="/products/" element={<AllProducts/>}/>
-            <Route path="/categoried/" element={<Categoried/>}/>
-            <Route path="*" element={<Page404/>}/>
-            <Route path="/bruh4sitemap" element={<Sitemap/>}/>
-      </Routes>
-      </Router>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <h1>Waiter System Frontend</h1>
+        {/* Add a link to your Django login page if you don't have a React login form */}
+        <p>
+          Ensure you are logged in via the{' '}
+          <a
+            href="http://127.0.0.1:8000/admin/" // Or your custom login URL
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Django Admin or Login Page
+          </a>{' '}
+          first.
+        </p>
+      </header>
+      <main>
+        <InventoryList />
+        {/* You can add more components here later (e.g., for Orders, User Profile, Adding Items) */}
+      </main>
+    </div>
   );
 }
 
