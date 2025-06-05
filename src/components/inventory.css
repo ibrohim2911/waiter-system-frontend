@@ -1,0 +1,39 @@
+.inventory-container {
+    max-width: 700px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 2em;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.inventory-list {
+    margin-top: 2em;
+    padding: 0;
+}
+
+.inventory-list li {
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1em;
+    list-style: none;
+}
+
+.inventory-list strong {
+    color: #1976d2;
+}
+
+.inventory-list .desc {
+    color: #444;
+    margin: 0.5em 0;
+}
+
+.inventory-list .meta {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 0.5em;
+}
